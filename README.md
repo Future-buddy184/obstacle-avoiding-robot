@@ -17,3 +17,13 @@ An Arduino-based obstacle-avoiding robot built from scratch to learn robotics, e
 ## Project Status
 
 Planning Phase
+## Progress
+
+- [x] Repository Created
+- [x] Project Roadmap Created
+- [x] Architecture Drafted
+- [ ] Components Purchased
+- [ ] Robot Assembled
+- [ ] Motor Testing
+- [ ] Sensor Testing
+- [ ] Obstacle Avoidance Implemented
