@@ -1,12 +1,12 @@
 # Robot Architecture
 
-Ultrasonic Sensor
-        |
-        v
-Arduino Nano
-        |
-        v
-Motor Driver
-        |
-        v
-DC Motors
+HC-SR04 Ultrasonic Sensor
+           |
+           v
+     Arduino Nano
+           |
+           v
+      L298N Driver
+        /      \
+       v        v
+ Motor A    Motor B
