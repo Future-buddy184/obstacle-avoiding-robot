@@ -1,3 +1,4 @@
+# Last Updated: June 2026
 # Troubleshooting Log 
 This document records the major hardware and software issues encountered during the development of the obstacle-avoiding robot, along with the steps taken to diagnose and resolve them.
 
@@ -40,6 +41,7 @@ Both BO gear motors were confirmed to be funtional.
 - Inconsistant output voltage.
 - Driver occasionally worked after power cycling.
 - Manual testing of motor driver inputs produced expected motor direction changes.
+- Each motor operated correctly when tested individually, but problems occured when both motors were connected simultaneously.
 
 ### Conclusion 
 Based on repeated testings, the L298N motor driver became the primary suspect. Since motors, Arduino Nano, wiring, and control signals verified independently, the project will continue with a TB6612FNG motor driver for comparision and further testing.
