@@ -14,10 +14,10 @@ An Arduino Nano-based obstacle-avoiding robot built from scratch to learn roboti
 
 - Arduino Nano
 - HC-SR04 Ultrasonic Sensor
-- L298N Motor Driver (currently being replaced with TB6612FNG)
+- L298N Motor Driver (being replaced due to efficiency lomotations)
 - 2*BO Gear Motors
 - Robot Chassis
-- Battery Pack
+- Battery Pack (currently 4*AA,  upgrading to 2*18650 Li-ion)
 
 ## Current Project Status
 
@@ -36,6 +36,7 @@ Completed
 - [X] Ultrasonic sensor testing
 - [X] Basic movement code tested
 - [X] GitHub SSH authentication
+- [X] Extensive hardware troubleshooting documented
  
 ## In Progress
 - [ ] Replace L298N with TB6612FNG
@@ -48,13 +49,13 @@ Completed
 During development, an intermittent issue was encountered with the L298N motor driver. Extensive troubleshooting was performed using a multimeter, continuity testing, and isolated motor tests. The project is being upgraded to a TB6612FNG motor driver to improve efficiency and reliability.
 
 ## Fture Improvements
-- obstacle avoidence optimization
 - Bluetooth remote control
 - Line following mode
+- obstacle avoidence optimization
 - Camera integration
 - Computer vision
 - AI-assisted navigation
 
 
-This repository documents my robotics learning journey, including successful implementations, debugging, and hardware improvements.
+This repository documents process behind building an Arduino-based obstacle-avoiding robot-from planning and hardware integration to debugging, testing, and continous improvement.
 
