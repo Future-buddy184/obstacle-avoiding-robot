@@ -74,4 +74,6 @@ Arduino Nano verified and operational.
 - Ready to begin hardware integration.
 - Soldered header pins onto the TB6612FNG motor driver.
 - Inspected solder joints for proper electrical connections.
-- Prepared the motor driver for wiring and testing.
+- Prepared the motor driver for wiring and testing
+- Verified no short circuits between VM-GND and VCC-GND using a multimeter.
+- Began wiring the TB6612FNG with the Arduino Nano for motor testing.
