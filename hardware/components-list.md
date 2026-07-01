@@ -25,9 +25,9 @@
 | Robot Chassis | ✅ Assembled |
 | Wheels | ✅ Installed |
 | L298N Motor Driver | ❌ Being Replaced |
-| TB6612FNG Motor Driver | 🚚 Ordered |
-| 2×18650 Li-ion Cells | 🚚 Ordered |
-| 2×18650 Battery Holder | 🚚 Ordered |
+| TB6612FNG Motor Driver | ✅ Received |
+| 2×18650 Li-ion Cells | ✅ Received |
+| 2×18650 Battery Holder | ✅ Received |
 | 2S BMS | 📋 Planned |
 | 2S Li-ion Charger | 📋 Planned |
 
