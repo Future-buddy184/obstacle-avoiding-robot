@@ -37,6 +37,7 @@ Completed
 - [X] Basic movement code tested
 - [X] GitHub SSH authentication
 - [X] Extensive hardware troubleshooting documented
+- [X] All ordered components received
  
 ## In Progress
 - [ ] Replace L298N with TB6612FNG
