@@ -1,67 +1,119 @@
 # 📚 Lessons Learned
 
-This file records important technical and project-management lessons learned while developing the Obstacle Avoiding Robot.
+This file records important technical, engineering, and project-management lessons learned while developing **Jarvis Rover**.
 
 ---
 
-## 📅 2026-06-20
+# 📅 2026-06-20
 
-### GitHub
+## GitHub
 
 - GitHub cannot create empty folders.
 - Folders only exist after at least one file is added.
-- Well-organized repositories are easier for others to understand and contribute to.
+- Well-organized repositories are easier to maintain and understand.
+- Clear documentation is essential for long-term projects.
 
-### Project Planning
+## Project Planning
 
 - Planning the repository structure before writing code saves time later.
-- Breaking a project into documentation, hardware, and software sections improves maintainability.
+- Separating documentation, hardware, software, and code improves project organization.
 
-### Documentation
+## Documentation
 
 - Good documentation is as important as good code.
-- A README should explain the project clearly to someone with no prior knowledge.
+- A README should clearly explain the project to new visitors.
+- Recording development decisions makes future improvements easier.
 
-### Next Improvements
+---
 
-- [ ] Add project photos
-- [ ] Upload wiring diagram
-- [ ] Add Arduino source code
-- [ ] Record demonstration video
-- [ ] Improve README with system architecture
+# 📅 2026-06-25
 
-## 📅 2026-06-25
+## Arduino Programming
 
-### Arduino Programming
+- Learned how variables store and update data.
+- Understood how `if` statements allow robots to make decisions.
+- Learned the purpose of `setup()` and `loop()`.
+- Used `Serial.begin()` and `Serial.print()` for debugging.
 
-- Learned how variables store and update data during program execution.
-- Understood how `if` statements allow the robot to make decisions based on sensor input.
-- Learned the purpose of the `setup()` function for initialization tasks.
-- Learned the purpose of the `loop()` function for continuous execution.
-- Used `Serial.begin()` and `Serial.print()` to display debugging information in the Serial Monitor.
+## Key Takeaway
 
-### Key Takeaway
+Even a simple robot requires continuous decision-making through programming logic.
 
-Even a simple obstacle-avoiding robot requires programming concepts such as variables, conditional logic, and continuous control loops.
+---
 
-## 📅 2026-06-27
+# 📅 2026-06-27
 
-### Arduino
+## Arduino
 
 - Learned how PWM controls motor speed.
 - Understood why motor drivers are required instead of powering motors directly.
 
-### Debugging
+## Debugging
 
-- One motor rotated in the opposite direction because the wiring polarity was reversed.
-- Used Serial Monitor to identify incorrect sensor readings.
+- Motor direction depends on wiring polarity.
+- The Serial Monitor is one of the most useful debugging tools.
 
-### Robotics
+## Robotics
 
-- Ultrasonic sensors can produce unstable readings at sharp angles.
-- Taking multiple measurements and averaging them improves reliability.
+- Ultrasonic sensors can produce unstable readings.
+- Averaging multiple distance measurements improves reliability.
 
-### Next Improvements
+---
 
-- [ ] Implement smoother turning algorithm
-- [ ] Reduce obstacle detection delay
+# 📅 2026-07
+
+## Embedded Systems
+
+- Hardware problems are not always caused by faulty components; software configuration can also affect hardware behavior.
+- Arduino timers are shared resources that can be used by different peripherals and libraries.
+- Understanding hardware timers is important when combining PWM outputs and Servo control.
+
+## Hardware Integration
+
+- The TB6612FNG motor driver is more efficient than the L298N for battery-powered robots.
+- Supplying stable power significantly improves robot performance.
+- Arduino and the motor driver must share a common ground.
+
+## Debugging
+
+- Always test hardware with the simplest possible program before changing wiring.
+- Isolating one subsystem at a time makes troubleshooting much faster.
+- Never assume the hardware is faulty before verifying the software.
+
+## Robotics
+
+- Obstacle avoidance depends on both sensing and motion control.
+- Sudden acceleration often causes unnecessary collisions.
+- Smoother steering improves navigation more than simply reducing speed.
+- Filtering noisy sensor data produces more reliable robot behavior.
+
+## Software Engineering
+
+- Small, incremental improvements are easier to debug than large changes.
+- Modular software is easier to maintain and extend.
+- Building reusable functions reduces future development effort.
+
+## Engineering Mindset
+
+- A robot should not simply react to obstacles.
+- It should continuously observe its surroundings, estimate risk, and adjust its movement accordingly.
+- Good engineering focuses on solving root causes instead of only fixing symptoms.
+
+## Project Development
+
+- Documentation should evolve alongside the code.
+- Recording both successful solutions and failed attempts helps future development.
+- Every completed version provides a stronger foundation for the next version.
+
+---
+
+# 🚀 Next Learning Goals
+
+- [ ] Build the Motion Controller
+- [ ] Learn adaptive speed control
+- [ ] Design the Environment Analyzer
+- [ ] Implement the Decision Engine
+- [ ] Improve software modularity
+- [ ] Learn sensor fusion
+- [ ] Explore computer vision
+- [ ] Study AI-assisted robotics
