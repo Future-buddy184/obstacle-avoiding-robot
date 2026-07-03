@@ -60,7 +60,7 @@ Even a simple robot requires continuous decision-making through programming logi
 
 ---
 
-# 📅 2026-07
+# 📅 2026-07-03
 
 ## Embedded Systems
 
