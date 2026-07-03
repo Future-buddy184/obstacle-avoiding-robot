@@ -58,5 +58,4 @@ During development, an intermittent issue was encountered with the L298N motor d
 - AI-assisted navigation
 
 
-This repository documents process behind building an Arduino-based obstacle-avoiding robot-from planning and hardware integration to debugging, testing, and continous improvement.
-
+This repository documents process behind building an Arduino-based obstacle-avoiding robot-from planning and hardware integration to debugging, testing, and continous improvement
