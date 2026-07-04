@@ -1,83 +1,231 @@
-# Obstacle Avoidance Algorithm
+# Robot Navigation Algorithm
+
+## Overview
+
+Jarvis Rover uses an iterative development approach where each version improves the robot's navigation capabilities.
+
+The goal is to gradually evolve from simple reactive obstacle avoidance to intelligent autonomous navigation.
+
+---
+
+# Version 1 – Basic Motion Control ✅
 
 ## Objective
 
-Enable the robot to navigate autonomously while avoiding obstacles using an HC-SR04 ultrasonic sensor mounted on an SG90 servo motor.
+Verify hardware operation and motor control.
 
----
-
-# High-Level Algorithm
+### Algorithm
 
 1. Move forward.
-2. Measure the distance in front of the robot.
-3. If the measured distance is greater than the safety threshold:
-   - Continue moving forward.
-4. Otherwise:
-   - Stop.
-   - Rotate the servo to the left.
-   - Measure and store the left distance.
-   - Rotate the servo to the right.
-   - Measure and store the right distance.
-   - Return the servo to the center position.
-   - Compare the measured distances.
-   - Turn toward the side with greater free space.
-   - Resume forward movement.
+2. Stop.
+3. Move backward.
+4. Turn left.
+5. Turn right.
+6. Repeat.
+
+### Outcome
+
+- Verified motor driver operation.
+- Verified motor direction.
+- Verified PWM speed control.
 
 ---
 
-# Decision Parameters
+# Version 2 – Autonomous Obstacle Avoidance ✅
 
-| Parameter| Value |
-|----------|-------|
-| Safe Distance | 20 cm |
-| Scan Directions | Left, Right |
-| Sensor | HC-SR04 |
-| Servo | SG90 |
+## Objective
+
+Enable the robot to navigate autonomously while avoiding obstacles.
+
+### Algorithm
+
+1. Move forward.
+2. Measure front distance.
+3. If path is clear:
+   - Continue forward.
+4. Otherwise:
+   - Stop.
+   - Scan left.
+   - Scan right.
+   - Compare distances.
+   - Turn toward the larger free space.
+   - Continue forward.
+
+### Characteristics
+
+- Reactive navigation
+- Fixed speed
+- Fixed turning delay
+
+### Outcome
+
+First fully autonomous obstacle-avoiding robot.
+
+---
+
+# Version 3 – Smarter Navigation ✅
+
+## Improvements
+
+- Smooth servo scanning
+- Averaged ultrasonic measurements
+- Distance filtering
+- Adaptive turning
+- Reduced false detections
+- Reduced aggressive turns
+- Improved navigation stability
+
+### Characteristics
+
+- More reliable obstacle detection
+- Better turning decisions
+- Smoother movement
+
+### Outcome
+
+Significantly improved autonomous navigation.
+
+---
+
+# Version 4 – Adaptive Autonomous Navigation 🚧
+
+## Objective
+
+Replace simple obstacle reactions with intelligent navigation behaviour.
+
+### Planned Software Modules
+
+### Sensor Manager
+
+Responsibilities:
+
+- Read ultrasonic sensor
+- Filter noisy measurements
+- Control servo scanning
+
+---
+
+### Environment Analyzer
+
+Responsibilities:
+
+- Measure available free space
+- Estimate navigation risk
+- Detect narrow passages
+
+---
+
+### Decision Engine
+
+Responsibilities:
+
+- Select movement direction
+- Determine driving behaviour
+- Decide when to slow down
+- Handle blocked paths
+
+---
+
+### Motion Controller
+
+Responsibilities:
+
+- Smooth acceleration
+- Smooth braking
+- Adaptive speed control
+- Smooth turning
+
+---
+
+# Overall Decision Flow
+
+```text
+Move Forward
+
+↓
+
+Measure Distance
+
+↓
+
+Filter Sensor Data
+
+↓
+
+Analyze Environment
+
+↓
+
+Safe?
+
+├── Yes → Continue Forward
+│
+└── No
+      ↓
+ Scan Left & Right
+      ↓
+Compare Free Space
+      ↓
+Choose Best Direction
+      ↓
+Turn Smoothly
+      ↓
+Continue Navigation
+```
 
 ---
 
 # Future Algorithm Improvements
 
-- Dynamic obstacle distance threshold
-- Speed adjustment based on obstacle distance
-- Smoother turning behavior
-- Path memory
-- Dead-end detection
+- Dynamic safety distance
+- Adaptive speed control
+- Environment-aware navigation
+- Wall following
+- Dead-end recovery
+- Maze solving
+- Sensor fusion
+- Camera-based navigation
 - AI-assisted navigation
 
 ---
 
-# Pseudocode
+# Simplified Pseudocode
 
-,,,
+```text
+loop
 
-    loop:
-      move_forward()
-   
-    distance = measure_front()
+    readSensors()
 
-    if distance > SAFE_DISTANCE:
-        continue
+    analyzeEnvironment()
 
-    stop()
+    decision = chooseMovement()
 
-    left = scan_left()
-    right = scan_right()
+    executeMovement(decision)
 
-    if left > right:
-        turn_left()
-    else:
-        turn_right()
-
-    move_forward()
-    
-,,,
+end loop
+```
 
 ---
 
-Implementation Status
+# Implementation Status
 
-- [x] Algorithm designed
-- [ ] Arduino implementation
-- [ ] Hardware testing
-- [ ] Performance optimization
+## Version 1
+
+- [x] Basic motion control
+
+## Version 2
+
+- [x] Autonomous obstacle avoidance
+
+## Version 3
+
+- [x] Smarter navigation
+
+## Version 4
+
+- [ ] Motion Controller
+- [ ] Sensor Manager
+- [ ] Environment Analyzer
+- [ ] Decision Engine
+- [ ] Adaptive speed control
+- [ ] Navigation optimization
