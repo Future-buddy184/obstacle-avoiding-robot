@@ -1,103 +1,225 @@
-# Robot Architecture
+# Jarvis Rover Architecture
 
-## System Overview
+## Overview
 
-The robot consists of four primary subsystems:
+Jarvis Rover is designed using a modular architecture that separates hardware control, sensing, decision-making, and navigation into independent subsystems.
 
-1. Power System
-2. Control System
-3. Sensing System
-4. Drive System
+The goal is to make the software easier to understand, debug, extend, and reuse as the robot evolves.
 
 ---
 
-## Block Diagram
+# System Architecture
 
 ```
-          +----------------------+
-          |   2×18650 Battery    |
-          +----------+-----------+
-                     |
-                     v
-          +----------------------+
-          |  TB6612FNG Driver    |
-          +----------+-----------+
-                     ^
-                     |
-          +----------+-----------+
-          |    Arduino Nano      |
-          +----+-----------+-----+
-               |           |
-               |           |
-               v           v
-        HC-SR04 Sensor   Servo Motor
-               |
-               v
-      Distance Measurement
-
-Arduino Nano
-      |
-      v
-TB6612FNG
-      |
-      +----------------+
-      |                |
-      v                v
- Left Motor      Right Motor
+                   Environment
+                        │
+                        ▼
+              ┌──────────────────┐
+              │ Ultrasonic Sensor │
+              └─────────┬─────────┘
+                        │
+                        ▼
+              ┌──────────────────┐
+              │ Sensor Manager   │
+              └─────────┬─────────┘
+                        │
+                        ▼
+          ┌──────────────────────────┐
+          │ Environment Analyzer     │
+          └─────────┬────────────────┘
+                    │
+                    ▼
+          ┌──────────────────────────┐
+          │ Decision Engine          │
+          └─────────┬────────────────┘
+                    │
+                    ▼
+          ┌──────────────────────────┐
+          │ Motion Controller        │
+          └─────────┬────────────────┘
+                    │
+                    ▼
+          ┌──────────────────────────┐
+          │ TB6612FNG Motor Driver   │
+          └─────────┬────────────────┘
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+     Left Motor          Right Motor
 ```
 
 ---
 
-## Subsystem Description
+# Hardware Architecture
 
-### Power System
+## Power System
 
-- 2×18650 Li-ion battery pack
-- Supplies power to the motor driver
-- Arduino powered through regulated supply
+- 2×18650 Li-ion Battery Pack
+- Power switch
+- TB6612FNG motor driver
+- Arduino Nano
 
 ---
 
-### Control System
+## Control System
 
 - Arduino Nano
-- Reads sensor data
-- Runs obstacle avoidance algorithm
-- Controls motor driver
+- Motion Controller
+- Navigation Logic
+- Decision Engine
 
 ---
 
-### Sensing System
+## Sensor System
 
 - HC-SR04 Ultrasonic Sensor
-- Mounted on servo motor
-- Measures surrounding distances
+- SG90 Servo Motor
 
 ---
 
-### Drive System
+## Drive System
 
 - TB6612FNG Motor Driver
-- Two BO gear motors
-- Differential drive steering
+- Left BO Gear Motor
+- Right BO Gear Motor
 
 ---
 
-## Data Flow
+# Software Architecture
 
-1. Ultrasonic sensor measures distance.
-2. Arduino processes the readings.
-3. Decision algorithm selects movement.
-4. Motor driver receives control signals.
-5. Motors move the robot.
-6. Process repeats continuously.
+## Sensor Manager
+
+Responsibilities
+
+- Read ultrasonic distance
+- Control servo scanning
+- Filter noisy sensor data
+- Provide reliable measurements
 
 ---
 
-## Planned Upgrades
+## Environment Analyzer
 
-- Bluetooth communication
-- Camera module
+Responsibilities
+
+- Detect nearby obstacles
+- Estimate available free space
+- Identify narrow passages
+- Evaluate navigation risk
+
+---
+
+## Decision Engine
+
+Responsibilities
+
+- Decide whether to move forward
+- Determine turning direction
+- Select appropriate driving behavior
+- Recover from dead ends
+
+---
+
+## Motion Controller
+
+Responsibilities
+
+- Smooth acceleration
+- Smooth braking
+- Speed control
+- Turning control
+- Maintain stable movement
+
+---
+
+# Data Flow
+
+```
+Environment
+
+↓
+
+Ultrasonic Sensor
+
+↓
+
+Sensor Manager
+
+↓
+
+Environment Analyzer
+
+↓
+
+Decision Engine
+
+↓
+
+Motion Controller
+
+↓
+
+TB6612FNG
+
+↓
+
+Motors
+```
+
+---
+
+# Current Development Stage
+
+## ✅ Version 1
+
+- Hardware assembly
+- Basic testing
+
+## ✅ Version 2
+
+- Autonomous obstacle avoidance
+
+## ✅ Version 3
+
+- Smarter navigation
+- Adaptive turning
+- Stable movement
+
+## 🚧 Version 4
+
+Currently under development.
+
+Planned modules:
+
+- Motion Controller
+- Adaptive Speed Controller
+- Environment Analyzer
+- Decision Engine
+- Recovery System
+
+---
+
+# Design Principles
+
+- Modular software
+- Incremental development
+- Test one subsystem at a time
+- Prefer reusable code
+- Solve root causes
+- Keep documentation synchronized with development
+
+---
+
+# Future Expansion
+
+The architecture is intentionally modular to support future upgrades such as:
+
+- Wheel encoders
+- IMU
+- Sensor fusion
+- Bluetooth
+- Wi-Fi
+- ESP32 migration
+- Camera integration
 - Computer vision
 - AI-assisted navigation
-- Additional sensors
