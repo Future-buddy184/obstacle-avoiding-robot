@@ -2,28 +2,43 @@
 
 This directory contains the Arduino source code for **Jarvis Rover**.
 
-The project follows a version-based development approach. Each version introduces new features while preserving previous milestones for reference and learning.
+The project follows a version-based development approach. Each version introduces new features while preserving previous milestones for reference, learning, debugging, and comparison.
+
+---
+
+# Repository Navigation
+
+Each version represents an engineering milestone in the development of Jarvis Rover.
+
+Earlier versions are intentionally preserved to document the project's evolution and provide a reference for future improvements.
 
 ---
 
 # Code Structure
 
-```
+```text
 code/
-├── V1/
-│   ├── Motor_Test
-│   ├── Servo_Test
-│   ├── Ultrasonic_Test
-│   └── Basic_Movement
 │
-├── V2/
-│   └── Basic_Obstacle_Avoidance
+├── README.md
 │
-├── V3/
-│   └── Improved_Obstacle_Avoidance
+├── V1-Hardware-Bringup/
+│   ├── README.md
+│   ├── Motor_Test/
+│   ├── Servo_Test/
+│   ├── Ultrasonic_Test/
+│   └── Basic_Movement/
 │
-└── V4/
-    └── Adaptive_Autonomous_Navigation (In Development)
+├── V2-Autonomous-Navigation/
+│   ├── README.md
+│   └── Basic_Obstacle_Avoidance/
+│
+├── V3-Smart-Navigation/
+│   ├── README.md
+│   └── Improved_Obstacle_Avoidance/
+│
+└── V4-Adaptive-Navigation/
+    ├── README.md
+    └── (In Development)
 ```
 
 ---
@@ -32,77 +47,94 @@ code/
 
 ## Version 1 – Hardware Bring-Up ✅
 
-Purpose:
+### Purpose
 
-- Verify each hardware component independently.
+Verify that every hardware component operates correctly before integrating the complete robot.
 
-Includes:
+### Includes
 
 - Motor testing
 - Servo testing
 - Ultrasonic sensor testing
-- Basic movement
+- Basic movement testing
 
 ---
 
-## Version 2 – Autonomous Robot ✅
+## Version 2 – Autonomous Navigation ✅
 
-Purpose:
+### Purpose
 
-- Implement the first complete obstacle-avoidance algorithm.
+Implement the first complete autonomous obstacle-avoidance algorithm.
 
-Features:
+### Features
 
+- Forward obstacle detection
 - Servo scanning
-- Left/right decision making
-- Autonomous navigation
+- Left/right path selection
+- Basic autonomous navigation
 
 ---
 
-## Version 3 – Smarter Navigation ✅
+## Version 3 – Smart Navigation ✅
 
-Purpose:
+### Purpose
 
-- Improve navigation quality and stability.
+Improve navigation quality, stability, and movement smoothness.
 
-Features:
+### Features
 
 - Smooth servo scanning
 - Filtered ultrasonic measurements
 - Reduced false detections
-- Improved turning behaviour
-- More stable movement
+- Adaptive turning
+- Improved movement stability
 
 ---
 
-## Version 4 – Adaptive Autonomous Navigation 🚧
+## Version 4 – Adaptive Navigation 🚧
 
-Purpose:
+### Purpose
 
-Develop a modular robotics software architecture.
+Develop a modular robotics software architecture that supports more intelligent autonomous navigation.
 
-Planned Modules:
+### Planned Modules
 
 - Sensor Manager
 - Environment Analyzer
 - Decision Engine
 - Motion Controller
-- Adaptive Speed Control
+- Adaptive Speed Controller
 
 ---
 
 # Development Principles
 
 - Build incrementally.
-- Keep code modular.
 - Test one subsystem at a time.
+- Keep code modular and reusable.
 - Document every significant change.
 - Preserve previous working versions.
+- Improve software through iterative development.
 
 ---
 
 # Current Stable Version
 
-**Version 3** is the latest fully tested and operational version of Jarvis Rover.
+**Version 3 – Smart Navigation** is the latest fully tested and operational release.
 
-Development is now focused on **Version 4**, which introduces a modular software architecture for more intelligent autonomous navigation.
+Development is now focused on **Version 4 – Adaptive Navigation**, introducing a modular software architecture, adaptive speed control, and more intelligent navigation behaviour.
+
+---
+
+# Future Development
+
+Future versions may introduce:
+
+- Wheel encoders
+- IMU integration
+- Sensor fusion
+- Bluetooth control
+- ESP32 migration
+- Camera integration
+- Computer vision
+- AI-assisted navigation
