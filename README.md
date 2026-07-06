@@ -34,6 +34,14 @@ The project began as a basic obstacle-avoiding robot and has gradually evolved i
 
 ---
 
+# Project Gallery
+
+Project photographs documenting the development of **Jarvis Rover** are available in the `images/` directory.
+
+The gallery will continue to grow as new hardware and software milestones are completed.
+
+---
+
 # Technologies
 
 - Arduino IDE
