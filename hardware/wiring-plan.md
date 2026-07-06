@@ -148,3 +148,20 @@ This configuration has been fully tested and is the official wiring for Jarvis R
 - ✅ Servo tested
 - ✅ Ultrasonic sensor tested
 - ✅ Autonomous navigation verified
+
+---
+
+# Wiring Diagram
+
+The complete wiring diagram for the current Version 3 hardware configuration will be available as `wiring-diagram.png` in this directory.
+
+It documents the final wiring configuration using:
+
+- Arduino Nano
+- TB6612FNG Motor Driver
+- HC-SR04 Ultrasonic Sensor
+- SG90 Servo Motor
+- 2× BO Gear Motors
+- 2×18650 Li-ion Battery Pack
+
+The diagram will be updated whenever the hardware configuration changes.
