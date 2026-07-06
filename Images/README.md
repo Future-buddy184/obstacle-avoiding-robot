@@ -1,12 +1,18 @@
 # Images
 
-This folder contains photographs documenting the development of the robot.
+This directory contains photographs and visual resources documenting the development of **Jarvis Rover**.
 
-## Planned Images
+## Current Images
 
-- Chassis assembly
-- Electronics wiring
-- Sensor mounting
-- Motor driver upgrade
-- Testing setup
-- Completed robot
+| Image | Description |
+|--------|-------------|
+| `chassis.jpg` | Initial robot chassis assembly |
+
+## Planned Additions
+
+- Robot front view
+- Robot top view
+- Internal electronics
+- Wiring layout
+- Version 3 hardware
+- Demonstration GIF
