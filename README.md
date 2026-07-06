@@ -1,7 +1,7 @@
 # Jarvis Rover
 > **Repository:** `obstacle-avoiding-robot`
 
-An Arduino Nano-based autonomous mobile robot developed from scratch to learn robotics, embedded systems, electronics, Arduino programming, software engineering, and autonomous navigation.
+An Arduino Nano-based autonomous mobile robot developed from scratch as a hands-on platform for learning robotics, embedded systems, electronics, Arduino programming, software engineering, and autonomous navigation.
 
 The project began as a basic obstacle-avoiding robot and has gradually evolved into a long-term robotics platform focused on modular software architecture, intelligent navigation, and future AI integration.
 
@@ -34,6 +34,18 @@ The project began as a basic obstacle-avoiding robot and has gradually evolved i
 
 ---
 
+# Technologies
+
+- Arduino IDE
+- Embedded C++
+- Git
+- GitHub
+- Serial Monitor
+- PWM Motor Control
+- Ultrasonic Distance Sensing
+
+---
+
 # Project Evolution
 
 | Version | Status | Milestone |
@@ -42,6 +54,16 @@ The project began as a basic obstacle-avoiding robot and has gradually evolved i
 | ✅ V2 | Completed | First autonomous obstacle-avoiding robot |
 | ✅ V3 | Completed | Smarter navigation with smoother servo scanning, filtered distance measurements, adaptive turning, and stable obstacle avoidance |
 | 🚧 V4 | In Development | Modular architecture, adaptive speed control, environment analysis, and intelligent navigation |
+
+---
+
+# Current Stable Release
+
+**Latest Stable Software:** Version 3 – Smart Navigation
+
+Version 3 is the latest fully tested implementation of Jarvis Rover. It provides stable autonomous obstacle avoidance using smooth servo scanning, filtered ultrasonic measurements, and improved turning behavior.
+
+Development is now focused on **Version 4**, which introduces a modular software architecture for more intelligent autonomous navigation.
 
 ---
 
