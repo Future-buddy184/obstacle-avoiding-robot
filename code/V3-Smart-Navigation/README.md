@@ -65,3 +65,13 @@ Version 3 introduced several important engineering concepts:
 Version 3 significantly improved the robot's navigation performance while maintaining the same hardware configuration.
 
 These improvements established a stable software foundation for the modular architecture planned in Version 4.
+
+---
+
+# Release Status
+
+**Version 3** is the final stable monolithic implementation of Jarvis Rover.
+
+It represents the most refined obstacle-avoidance software developed using the current hardware platform, incorporating smoother servo scanning, filtered ultrasonic measurements, and improved navigation behavior.
+
+Future development continues in **Version 4**, where the software will transition to a modular architecture with dedicated components such as a Sensor Manager, Motion Controller, Decision Engine, and Adaptive Speed Controller.
